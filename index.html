@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+
     <title>3조 소개 홈페이지</title>
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -19,13 +20,18 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/kanbanboard.css" rel="stylesheet" />
     <link href="css/geolocation.css" rel="stylesheet" />
+    <link href="css/introduction.css" rel="stylesheet" />
+
+    <!--소개-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/introstyle.css" />
+    <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
 
 </head>
-<body id="page-top">
+<body id="page-top" class="is-preload">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-
             <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -33,8 +39,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kanban">Kanban Board</a></li>
                     <li class="nav-item"><a class="nav-link" href="#geolocation">Geolocation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#guestbook">GuestBook</a></li>
                 </ul>
             </div>
         </div>
@@ -42,14 +50,211 @@
     <!-- Masthead-->
     <header class="masthead">
         <div class="container">
-            <div class="masthead-subheading">Welcome To Our Studio!</div>
-            <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-            <a class="btn btn-primary btn-xl text-uppercase" href="#">Tell Me More</a>
+            <div class="masthead-subheading" align="right">Welcome To Our Studio!</div>
+        
+            <div class="masthead-heading text-uppercase" align="right">It's Nice To Meet You</div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#" align="right">Tell Me More</a>
         </div>
     </header>
+
+
+    <!-- introduction -->
+    <section class="is-preload" id="introduction" style="background-color: #ffc800">
+            <!-- Wrapper-->
+            <div id="wrapper" >
+                <!-- Nav -->
+                <nav id="nav">
+                    <a href="#home"><img src="images/homeicon.png" width="50px" height="50px"/><span>Home</span></a>
+                    <a href="#kimminju_intro"><img src="images/kimicon.png" width="60px" height="60px" /><span>KIM</span></a>
+                    <a href="#leekyungik_intro" ><img src="images/leeicon.png" width="60px" height="60px" /><span>LEE</span></a>
+                    <a href="#ahnjaeyoung"><img src="images/ahnicon.png" width="60px" height="60px" /><span>AHN</span></a>
+                    <a href="#jeonghyeonjeong"><img src="images/jeongicon.png" width="60px" height="60px" /><span>JEONG</span></a>
+                </nav>
+
+                <!-- Main -->
+                <div id="main">
+                    <!-- 팀소개 -->
+                    <article id="home" class="panel intro">
+                        <header>
+                            <h2>Ecount TEAM 3</h2>
+                            <h4>이카운트 3조의 팀 소개 페이지입니다.</h4>
+
+                        </header>
+                        <a href="#kimminju_intro" class="jumplink pic">
+                            <img src="images/pinterest_board_photo.png" />
+                            <span class="arrow icon solid fa-chevron-right"><span>who is ecountteam3</span></span>
+                        </a>
+                    </article>
+
+                    <!-- 김민주 -->
+                    <article id="kimminju_intro" class="panel intro">
+                        <header id="intro_parent">
+                            <!--말풍선-->
+                            <div id="intro_child" style="float: left; width: 40%; ">
+                                <div class="arrow_box_grey" style="width: 280px; height: 70px; text-align: center;">
+                                    <h3>Hi! I'm KIMMINJU</h3>
+                                </div>
+                                <div class="arrow_box_black_answer" id="que" style=" width: 280px; height: 70px; font-size: 22px; color: black; text-align: center;">What's your name?</div>
+                                <div class="arrow_box_grey" id="ans" style="width: 280px; height: 70px; text-align: center;">
+                                    <input type="text" id="whoname1" align="left" placeholder="Insert name & Enter!"
+                                           style="width:200px; height:30px; background-color:#dedede; font-size:22px; border:none; color:black;" onkeypress="if(event.keyCode==13){myFunction1();}">
+                                </div>
+                                <div class="arrow_box_black_answer" id="showname1" style="width: 280px; height: 70px; font-size: 22px; text-align: center; display: none; color: black; ">&nbsp;</div>
+                            </div>
+                            <!--사진-->
+                            <div id="intro_child" style=" width: 20%;">
+                                <img src="images/minju_basic.png" id="minjupic" style="width :200px; height:200px" />
+                            </div>
+                            <!--말풍선-->
+                            <div class="atferbubble" id="intro_child" style="float: right; width: 40%;">
+                                <div class="arrow_box_black" id="quhi" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <h3>Nice to meet you!</h3>
+                                </div>
+                                <div class="arrow_box_black" id="quweb" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <h3>Wanna see my website?</h3>
+                                </div>
+                                <div class="arrow_box_grey_yes" id="quanswer" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <button onclick="showshow1()" style="width:60px; height:40px; vertical-align:auto;">YES</button>
+                                    <button onclick="toggleimg1()" style="width: 60px; height: 40px; vertical-align:auto;">NO</button>
+                                </div>
+                                <div id="personalpage1" class="arrow_box_yellow" style="width: 280px; height: 70px; display: none; text-align: center;">
+                                    <h3>개인홈페이지 주소</h3>
+                                </div>
+                            </div>
+                        </header>
+                    </article>
+
+                    <!-- 이경익 -->
+                    <article id="leekyeongik_intro" class="panel intro">
+                        <header id="intro_parent">
+                            <!--말풍선-->
+                            <div id="intro_child" style="float: left; width: 40%; ">
+                                <div class="arrow_box_grey" style="width: 280px; height: 70px; text-align: center;">
+                                    <h3>Hi! I'm LEEKYEONGIK</h3>
+                                </div>
+                                <div class="arrow_box_black_answer" id="que" style=" width: 280px; height: 70px; font-size: 22px; color: black; text-align: center;">What's your name?</div>
+                                <div class="arrow_box_grey" id="ans" style="width: 280px; height: 70px; text-align: center;">
+                                    <input type="text" id="whoname2" align="left" placeholder="Insert name & Enter!"
+                                           style="width:200px; height:30px; background-color:#dedede; font-size:22px; border:none; color:black;" onkeypress="if(event.keyCode==13){myFunction2();}">
+                                </div>
+                                <div class="arrow_box_black_answer" id="showname2" style="width: 280px; height: 70px; font-size: 22px; text-align: center; display: none; color: black; ">&nbsp;</div>
+                            </div>
+                            <!--사진-->
+                            <div id="intro_child" style=" width: 20%;">
+                                <img src="images/kyeonik_basic.jpg" id="kyeongikpic" style="width :200px; height:200px" />
+                            </div>
+                            <!--말풍선-->
+                            <div class="atferbubble" id="intro_child" style="float: right; width: 40%;">
+                                <div class="arrow_box_black" id="quhi2" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <h3>Nice to meet you!</h3>
+                                </div>
+                                <div class="arrow_box_black" id="quweb2" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <h3>Wanna see my website?</h3>
+                                </div>
+                                <div class="arrow_box_grey_yes" id="quanswer2" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <button onclick="showshow2()" style="width:60px; height:40px; vertical-align:auto;">YES</button>
+                                    <button onclick="toggleimg2()" style="width: 60px; height: 40px; vertical-align:auto;">NO</button>
+                                </div>
+                                <div id="personalpage2" class="arrow_box_yellow" style="width: 280px; height: 70px; display: none; text-align: center;">
+                                    <h3>개인홈페이지 주소</h3>
+                                </div>
+                            </div>
+                        </header>
+                    </article>
+
+                    <!-- 안재영 -->
+                    <article id="leekyeongik_intro" class="panel intro">
+                        <header id="intro_parent">
+                            <!--말풍선-->
+                            <div id="intro_child" style="float: left; width: 40%; ">
+                                <div class="arrow_box_grey" style="width: 280px; height: 70px; text-align: center;">
+                                    <h3>Hi! I'm AHNJAEYOUNG</h3>
+                                </div>
+                                <div class="arrow_box_black_answer" id="que" style=" width: 280px; height: 70px; font-size: 22px; color: black; text-align: center;">What's your name?</div>
+                                <div class="arrow_box_grey" id="ans" style="width: 280px; height: 70px; text-align: center;">
+                                    <input type="text" id="whoname3" align="left" placeholder="Insert name & Enter!"
+                                           style="width:200px; height:30px; background-color:#dedede; font-size:22px; border:none; color:black;" onkeypress="if(event.keyCode==13){myFunction3();}">
+                                </div>
+                                <div class="arrow_box_black_answer" id="showname3" style="width: 280px; height: 70px; font-size: 22px; text-align: center; display: none; color: black; ">&nbsp;</div>
+                            </div>
+                            <!--사진-->
+                            <div id="intro_child" style=" width: 20%;">
+                                <img src="images/jaeyoung_basic.jpg" id="jaeyoungpic" style="width :200px; height:200px" />
+                            </div>
+                            <!--말풍선-->
+                            <div class="atferbubble" id="intro_child" style="float: right; width: 40%;">
+                                <div class="arrow_box_black" id="quhi3" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <h3>Nice to meet you!</h3>
+                                </div>
+                                <div class="arrow_box_black" id="quweb3" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <h3>Wanna see my website?</h3>
+                                </div>
+                                <div class="arrow_box_grey_yes" id="quanswe3r" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <button onclick="showshow3()" style="width:60px; height:40px; vertical-align:auto;">YES</button>
+                                    <button onclick="toggleimg3()" style="width: 60px; height: 40px; vertical-align:auto;">NO</button>
+                                </div>
+                                <div id="personalpage3" class="arrow_box_yellow" style="width: 280px; height: 70px; display: none; text-align: center;">
+                                    <h3>개인홈페이지 주소</h3>
+                                </div>
+                            </div>
+                        </header>
+                    </article>
+
+                    <!-- 정현정 -->
+                    <article id="jeonghyeonjeong" class="panel intro">
+                        <header id="intro_parent">
+                            <!--말풍선-->
+                            <div id="intro_child" style="float: left; width: 40%; ">
+                                <div class="arrow_box_grey" style="width: 280px; height: 70px; text-align: center;">
+                                    <h3>Hi! I'm JEONGHYEONJEONG</h3>
+                                </div>
+                                <div class="arrow_box_black_answer" id="que" style=" width: 280px; height: 70px; font-size: 22px; color: black; text-align: center;">What's your name?</div>
+                                <div class="arrow_box_grey" id="ans" style="width: 280px; height: 70px; text-align: center;">
+                                    <input type="text" id="whoname4" align="left" placeholder="Insert name & Enter!"
+                                           style="width:200px; height:30px; background-color:#dedede; font-size:22px; border:none; color:black;" onkeypress="if(event.keyCode==13){myFunction4();}">
+                                </div>
+                                <div class="arrow_box_black_answer" id="showname4" style="width: 280px; height: 70px; font-size: 22px; text-align: center; display: none; color: black; ">&nbsp;</div>
+                            </div>
+                            <!--사진-->
+                            <div id="intro_child" style=" width: 20%;">
+                                <img src="images/hyeonjeong_basic.png" id="hyeonjeongpic" style="width :200px; height:200px" />
+                            </div>
+                            <!--말풍선-->
+                            <div class="atferbubble" id="intro_child" style="float: right; width: 40%;">
+                                <div class="arrow_box_black" id="quhi4" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <h3>Nice to meet you!</h3>
+                                </div>
+                                <div class="arrow_box_black" id="quweb4" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <h3>Wanna see my website?</h3>
+                                </div>
+                                <div class="arrow_box_grey_yes" id="quanswer4" style="width: 280px; height: 70px; color: black; text-align: center; display: none; ">
+                                    <button onclick="showshow4()" style="width:60px; height:40px; vertical-align:auto;">YES</button>
+                                    <button onclick="toggleimg4()" style="width: 60px; height: 40px; vertical-align:auto;">NO</button>
+                                </div>
+                                <div id="personalpage4" class="arrow_box_yellow" style="width: 280px; height: 70px; display: none; text-align: center;">
+                                    <h3>개인홈페이지 주소</h3>
+                                </div>
+                            </div>
+                        </header>
+                    </article>
+
+
+                </div>
+            </div>
+            <!-- Scripts -->
+            <script src="js/jquery.min.js"></script>
+            <script src="js/browser.min.js"></script>
+            <script src="js/breakpoints.min.js"></script>
+            <script src="js/util.js"></script>
+            <script src="js/main.js"></script>
+            <script src="js/introduce.js"></script> 
+    </section>
+
+
+
     <!-- Kanban Board-->
     <section class="page-section" id="kanban">
-        <div class="container">
+        <div class="container">-
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Kanban Board</h2>
                 <h3 class="section-subheading text-muted">Drag&Drop과 Local Storage를 활용한 칸반보드입니다.</h3>
@@ -100,6 +305,11 @@
             </div>
         </div>
     </section>
+
+
+
+
+
     <!-- Geolocation-->
     <section class="page-section" id="geolocation">
         <div class="container">
@@ -115,7 +325,7 @@
                         <button type="button" value="location" class="now btn-primary m-1">현재위치</button>
                         <button type="button" value="location" class="view btn-primary m-1">로드뷰</button>
                     </div>
-                    
+
                     <div id="loc" class="clearfix">
                         <div id="move">
                             <div>
@@ -132,13 +342,57 @@
                                 <button type="button" value="강원 양양군 손양면 공항로 201" class="location Yangyang btn-primary m-1">양양공항</button>
                                 <button type="button" value="제주특별자치도 제주시 공항로 2" class="location Jeju btn-primary m-1">제주공항</button>
                             </div>
-                           
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- GuestBook-->
+    <section class="page-section" id="guestbook">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Guest Book</h2>
+                <h3 class="section-subheading text-muted">Ecount team 3 에게 하고 싶은 말을 남겨주세요</h3>
+            </div>
+            <div>
+                <form>
+                    <table class="tbl" align="center">
+                        <tr>
+                            <th>이름</th>
+                            <td>
+                                <input type="text" id="uName" style="width:300px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>내용</th>
+                            <td>
+                                <input type="text" id="uContent" style="width: 300px; height:200px;">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br>
+                    <input type="button" value="글쓰기" class="btn" style="width: 200px; height= 50px; font-size:18pt;" onclick="main()">
+
+                    <br><br>
+                    <table class="tbl" id="bbsTable" align="center">
+                        <tr>
+                            <th>번호</th>
+                            <th>이름</th>
+                            <th>내용</th>
+                            <th>작성일</th>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Footer-->
     <footer class="footer py-4">
         <div class="container">
@@ -161,9 +415,13 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <!-- Custom JS-->
-    <script src="js/introduction.js"></script>
+    <script src="js/introduce.js"></script>
     <script src="js/kanbanboard.js"></script>
     <script src="js/geolocation.js"></script>
+    <script src="js/guestbook.js"></script>
+
+
+    
     <!--카카오지도-->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8591044f66278fd2484621cb7140724d&libraries=services"></script>
 </body>
