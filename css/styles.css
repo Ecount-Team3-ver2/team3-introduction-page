@@ -335,7 +335,9 @@ label {
 }
 
 button {
-  border-radius: 0;
+    border-radius: 0;
+    width: 10px;
+    height: 10px;
 }
 
 button:focus:not(:focus-visible) {
@@ -347,15 +349,19 @@ button,
 select,
 optgroup,
 textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 10px;
+    height: 10px;
 }
 
 button,
 select {
-  text-transform: none;
+    text-transform: none;
+    width: 10px;
+    height: 10px;
 }
 
 [role=button] {
@@ -377,14 +383,18 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+    -webkit-appearance: button;
+    width: 10px;
+    height: 10px;
 }
-button:not(:disabled),
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled) {
-  cursor: pointer;
-}
+    button:not(:disabled),
+    [type=button]:not(:disabled),
+    [type=reset]:not(:disabled),
+    [type=submit]:not(:disabled) {
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+    }
 
 ::-moz-focus-inner {
   padding: 0;
@@ -4666,6 +4676,7 @@ textarea.form-control-lg {
 }
 
 .accordion-button {
+
   position: relative;
   display: flex;
   align-items: center;
